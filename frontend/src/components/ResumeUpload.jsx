@@ -17,11 +17,11 @@ const ResumeUpload = ({ setResult }) => {
         const formData = new FormData();
         formData.append("file", file);
 
-        response = await axios.post("http://127.0.0.1:5000/predict", formData, {
+        response = await axios.post("https://ai-resume-checker-n077.onrender.com", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
       } else {
-        response = await axios.post("http://127.0.0.1:5000/predict", {
+        response = await axios.post("https://ai-resume-checker-n077.onrender.com", {
           resume_text: resumeText,
         });
       }
